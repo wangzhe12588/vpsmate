@@ -92,8 +92,8 @@ class Install(object):
             f = urllib2.urlopen('http://www.vpsmate.org/api/latest')
             data = f.read()
             f.close()
-            downloadurl = https://github.com/wangzhe12588/vpsmate/raw/master/vpsmate.tar.gz
-            self._run('wget -nv -c "%s" -O vpsmate.tar.gz' % downloadurl)
+            downloadurl = https://raw.githubusercontent.com/wangzhe12588/vpsmate/master/vpsmate.tar.gz
+            self._run('wget --no-check-certificate -nv -c "%s" -O vpsmate.tar.gz' % downloadurl)
             
         # uncompress and install it
         self._run('mkdir vpsmate')
